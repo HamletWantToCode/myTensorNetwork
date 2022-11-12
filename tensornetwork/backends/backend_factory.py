@@ -18,13 +18,15 @@ from tensornetwork.backends.numpy import numpy_backend
 from tensornetwork.backends.jax import jax_backend
 from tensornetwork.backends.pytorch import pytorch_backend
 from tensornetwork.backends.symmetric import symmetric_backend
+from tensornetwork.backends.paddle import paddle_backend
 from tensornetwork.backends import abstract_backend
 _BACKENDS = {
     "tensorflow": tensorflow_backend.TensorFlowBackend,
     "numpy": numpy_backend.NumPyBackend,
     "jax": jax_backend.JaxBackend,
     "pytorch": pytorch_backend.PyTorchBackend,
-    "symmetric": symmetric_backend.SymmetricBackend
+    "symmetric": symmetric_backend.SymmetricBackend,
+    "paddle": paddle_backend.PaddleBackend
 }
 
 #we instantiate each backend only once and store it here
